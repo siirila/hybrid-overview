@@ -4,10 +4,10 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>Hybrid Gone Wrong</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+		<meta name="description" content="A review of hybrid app best practices">
+		<meta name="author" content="Jared Siirila">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -55,10 +55,6 @@
 					<p>
 						Say something witty about myself
 					</p>
-
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
 				</section>
 
 				<section>
@@ -69,10 +65,11 @@
 						<p>None of us were seasoned JavaScript/web developers</p>
 					</section>
 					<section>
-						<p>MVHuh?</p>
+						<img class="stretch" src="images/DoctorWhoMVHuh.jpg">
 					</section>
 					<section>
-						<p>We made many mistakes</p>
+						<img class="stretch" src="images/hugeMistake.jpg">
+						<aside class="notes">We made many mistakes</aside>
 					</section>
 					<section>
 						<p>But, we accomplished the most important thing...</p>
@@ -84,171 +81,148 @@
 						<p>And shipped several updates throughout the year with additional function</p>
 					</section>
 				</section>
+
 				<section>
-					<section>
-						<h2>Choosing a framework</h2>
-					</section>
-					<section>
-						<p>Good Idea - Select a framework based on your existing skills and experience</p>
-						<p>Bad Idea - Let a business executive tell you what framework to use</p>
-					</section>
-					<section>
-						<h3>Framework considerations:</h3>
-						<ul>
-							<li>Mobile support</li>
-							<li>Performance</li>
-							<li>Ease of use</li>
-							<li>Community</li>
-							<li>Maturity</li>
-						</ul>
-					</section>
+					<h2>Framework Selection</h2>
+				</section>
+				<section>
+					<p>Good Idea - Select a framework based on your existing skills, requirements, and features</p>
+					<p>Bad Idea - Select a framework for non-technical reasons</p>
+				</section>
+				<section>
+					<h3>Framework considerations</h3>
+					<ul>
+						<li>Mobile support</li>
+						<li>Performance</li>
+						<li>Ease of use</li>
+						<li>Community</li>
+						<li>Maturity</li>
+					</ul>
 				</section>
 				
 				<section>
-					<section>
-						<p>If you are new to modern web development, Single Page Apps, or MVC use an opinionated framework</p>
-					</section>
-					<section>
-						<p>Good opinionated frameworks include:</p>
-						<ul>
-							<li><a href="https://angularjs.org/">AngularJS</a></li>
-							<li><a href="http://ionicframework.com/">Ionic</a> - Mobile specific, built on AngularJS</li>
-							<li><a href="http://emberjs.com/">Ember</a></li>
-						</ul>
-					</section>
+					<p>For a first app use a full featured MV* framework</p>
+				</section>
+				<section>
+					<p>Good frameworks include:</p>
+					<ul>
+						<li><a href="https://angularjs.org/">AngularJS</a></li>
+						<li><a href="http://emberjs.com/">Ember</a></li>
+						<li><a href="http://ionicframework.com/">Ionic</a> - Mobile specific, built on AngularJS</li>
+						<li><a href="http://www.sencha.com/products/touch">Sencha Touch</a></li>
+						<li><a href="http://www.telerik.com/kendo-ui">Kendo UI</a></li>
+					</ul>
 				</section>
 
 				<section>
-					<section>
-						<p>If you have some experience with building Single Page Apps, consider building your own structure with best of components</p>
-					</section>
-					<section>
-						<ul>
-							<li><a href="http://backbonejs.org/">Backbone.js</a> - ???<li>
-						</ul>
-					</section>
+					<h3>With more experience you might also consider combining libraries to build a framework</h3>
+										<ul>
+						<li><a href="http://backbonejs.org/">Backbone.js</a> + </li>
+							<ul>
+								<li><a href="http://jquerymobile.com/">JQuery Mobile</a></li>
+								<li><a href="http://getbootstrap.com/">Bootstrap</a></li>
+							</ul>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Architecture</h2>
+					<aside class="notes">Heavily dictated by your framework choice, but there are still mistakes that can be made</aside>
+				</section>
+				<section>
+					<h2>Models</h2>
+					<aside class="notes">Share models between views/pages</aside>
+					<aside class="notes">We didn't separate our models from our views, and as a result we couldn't delete our views or we would lose state</aside>
+					<aside class="notes"></aside>
+				</section>
+				<section>
+					<h2>Controllers</h2>
+					<aside class="notes">Guess how many controllers we had in our application...</aside>
+					<aside class="notes">Create a controller for each page</aside>
+				</section>
+				<section>
+					<p>Templates are your friend</p>
+					<aside class="notes">I thought it would be a performance issue. Premature optimization</aside>
+					<aside class="notes">Keeps separation of concerns</aside>
+					<aside class="notes">Changing/iterating page designs was slow in JS</aside>
+					<aside class="notes">Lead to CSS mixed into the code</aside>
+					<aside class="notes">Ignore this if you are using React</aside>
+				</section>
+
+				<section>
+					<h2>Packaging and Building</h2>
 				</section>
 
 				<section>
 					<h2>Testing</h2>
 				</section>
 				<section>
-					<h1>Phones, Phones everywhere...</h1>
-				</section>
-				<section>
-					<h3>Multiple ways to test including</h3>
-					<ul>
+					<p>Would you say I have a plethora of testing options?</p>
+					<p class="fragment">Oh yes, you have a plethora.</p>
+					<p class="fragment">What is a plethora?</p>
+					<ul class="fragment">
 						<li>Desktop Browser</li>
 						<li>Mobile Browser</li>
-						<li>Emulator</li>
+						<li>Emulator/Simulator</li>
 						<li>Physical Devices</li>
 						<li>Cloud Services</li>
 					</ul>
 				</section>
 				<section>
-					<section>
-						<h2>Test your basic function in a desktop browser</h2>
-						<h1 class="fragment">Why?</h1>
-					</section>
-					<section>
-						<h1>More Power (Tim the Toolman screenshot)</h1>
-					</section>
+					<h3>Test first with a desktop browser</h3>
+					<h1 class="fragment">Why?</h1>
 				</section>
 				<section>
-					<h2>Emulators</h2>
+					<h1>More Power (Tim the Toolman screenshot)</h1>
+				</section>
+				<section>
+					<h2>Powerful emulation tools in Chrome DevTools</h2>
+				</section>
+				<section>
+					<h2>Desktop browser drawbacks</h2>
 					<ul>
-						<li>iOS <span class="fragment"> - Rocks</span></li>
+						<li>Useless for performance testing</li>
+						<li>Misses web view/browser specific issues</li>
+						<li>Hard to test device features</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Emulators/Simulators</h2>
+					<ul>
+						<li>iOS <span class="fragment"> - Awesome</span></li>
 						<li>Android <span class="fragment"> - Only if no other option</span></li>
 					</ul>
 				</section>
 				<section>
-					<section>
-						<h2>Physical Devices</h2>
-					</section>
+					<h1>Physical Devices</h1>
 				</section>
-
-
 				<section>
-					<section data-background="#007777">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#007777"</code> on a slide to change the full page background to the given color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code>&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Repeated Image Backgrounds</h2>
-						<pre><code style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-					</section>
+					<img class="stretch" src="images/phonesEverywhere.jpg">
 				</section>
-
 				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
+					<h1>Debugging</h1>
 				</section>
-
 				<section>
-					<h2>Pretty Code</h2>
-					<pre><code data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
-}
-					</code></pre>
-					<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+					<h2>2 years ago, it was a nightmare</h2>
 				</section>
-
 				<section>
-					<section id="fragments">
-						<h2>Fragmented Views</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<ol>
-							<li class="fragment"><code>any type</code></li>
-							<li class="fragment"><em>of view</em></li>
-							<li class="fragment"><strong>fragments</strong></li>
-						</ol>
+					<h2>Now, much easier</h2>
+				</section>
+				<section>
+					<h2>iOS</h2>
+					<p>Simple to connect to desktop Safari to debug</p>
+				</section>
+				<section>
+					<h2>Android</h2>
+					<p>As of 4.4, desktop Chrome DevTools can debug a webview</p>
+					<p class="fragment">For older versions of Android weinre is a good option</p>
+				</section>
+				
+				<section>
+					<h1>Performance Performance Performance</h1>
+				</section>
+				<section>
 
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's a few styles of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment roll-in">roll-in</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-green">highlight-green</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
-						<p class="fragment current-visible">current-visible</p>
-						<p class="fragment highlight-current-blue">highlight-current-blue</p>
-					</section>
 				</section>
 			</div>
 
