@@ -69,26 +69,77 @@
 					</section>
 					<section>
 						<img class="stretch" src="images/hugeMistake.jpg">
-						<aside class="notes">We made many mistakes</aside>
+						<aside class="notes">We made mistakes</aside>
 					</section>
 					<section>
-						<p>But, we accomplished the most important thing...</p>
+						<h2>But, we accomplished the most important thing...</h2>
 					</section>
 					<section>
-						<p>We shipped a working app</p>
+						<img class="stretch" src="images/msmSiteHeader.png">
+						<h1>We shipped</h1>
 					</section>
 					<section>
-						<p>And shipped several updates throughout the year with additional function</p>
+						<img class="stretch" src="images/msmVersions.png">
 					</section>
 				</section>
 
 				<section>
-					<h2>Framework Selection</h2>
+					<h1>Architecture</h1>
+					<aside class="notes">Heavily dictated by your framework choice, but there are still mistakes that can be made</aside>
 				</section>
 				<section>
-					<p>Good Idea - Select a framework based on your existing skills, requirements, and features</p>
-					<p>Bad Idea - Select a framework for non-technical reasons</p>
+					<h2>Use an MV* architecture</h2>
+					<ul>
+						<li>MVC - Model View Controller</li>
+						<li>MVP - Model View Presenter</li>
+						<li>MVVM - Model View View Model</li>
+						<li>HMVC - Hierarchical Model View Controller</li>
+						<li>Etc...</li>
+					</ul>
 				</section>
+				<section>
+					<img class="stretch" src="images/DoctorWhoMVHuh.jpg">
+				</section>
+				<section>
+					<h2>Model</h2>
+					<img class="stretch" src="images/model.jpg">
+				</section>
+				<section>
+					<h2>Model</h2>
+					<img class="stretch" src="images/modelTrain.jpg">
+					<aside class="notes">Share models between views/pages</aside>
+					<aside class="notes">We didn't separate our models from our views, and as a result we couldn't delete our views or we would lose state</aside>
+					<aside class="notes"></aside>
+				</section>
+				<section>
+					<h2>View</h2>
+					<img class="stretch" src="images/view.jpg">
+				</section>
+				<section>
+					<h1>Templates are your friend</h1>
+					<aside class="notes">I thought it would be a performance issue. Premature optimization</aside>
+					<aside class="notes">Keeps separation of concerns</aside>
+					<aside class="notes">Changing/iterating page designs was slow in JS</aside>
+					<aside class="notes">Lead to CSS mixed into the code</aside>
+					<aside class="notes">Ignore this if you are using React</aside>
+				</section>
+				<section>
+					<h2>Controller</h2>
+					<img class="stretch" src="images/controller.jpg">
+					<aside class="notes">Guess how many controllers we had in our application...</aside>
+					<aside class="notes">Create a controller for each page</aside>
+				</section>
+				<section>
+					<h1>Framework Selection</h1>
+				</section>
+				<section>
+					<img class="stretch" src="images/salad.jpg"></a>
+					<p>Good Idea - Select a framework based on your existing skills, requirements, and features</p>
+				</section>
+				<section>
+					<img class="stretch" src="images/doubleDown.jpg">
+					<p>Bad Idea - Select a framework for non-technical reasons</p>
+				</section>		
 				<section>
 					<h3>Framework considerations</h3>
 					<ul>
@@ -99,9 +150,8 @@
 						<li>Maturity</li>
 					</ul>
 				</section>
-				
 				<section>
-					<p>For a first app use a full featured MV* framework</p>
+					<h2>For a first app use a full featured MV* framework</h2>
 				</section>
 				<section>
 					<p>Good frameworks include:</p>
@@ -126,35 +176,11 @@
 				</section>
 
 				<section>
-					<h2>Architecture</h2>
-					<aside class="notes">Heavily dictated by your framework choice, but there are still mistakes that can be made</aside>
-				</section>
-				<section>
-					<h2>Models</h2>
-					<aside class="notes">Share models between views/pages</aside>
-					<aside class="notes">We didn't separate our models from our views, and as a result we couldn't delete our views or we would lose state</aside>
-					<aside class="notes"></aside>
-				</section>
-				<section>
-					<h2>Controllers</h2>
-					<aside class="notes">Guess how many controllers we had in our application...</aside>
-					<aside class="notes">Create a controller for each page</aside>
-				</section>
-				<section>
-					<p>Templates are your friend</p>
-					<aside class="notes">I thought it would be a performance issue. Premature optimization</aside>
-					<aside class="notes">Keeps separation of concerns</aside>
-					<aside class="notes">Changing/iterating page designs was slow in JS</aside>
-					<aside class="notes">Lead to CSS mixed into the code</aside>
-					<aside class="notes">Ignore this if you are using React</aside>
+					<h1>Packaging and Building</h1>
 				</section>
 
 				<section>
-					<h2>Packaging and Building</h2>
-				</section>
-
-				<section>
-					<h2>Testing</h2>
+					<h1>Testing</h1>
 				</section>
 				<section>
 					<p>Would you say I have a plethora of testing options?</p>
@@ -169,11 +195,11 @@
 					</ul>
 				</section>
 				<section>
-					<h3>Test first with a desktop browser</h3>
+					<h2>Test with a desktop browser first</h2>
 					<h1 class="fragment">Why?</h1>
 				</section>
 				<section>
-					<h1>More Power (Tim the Toolman screenshot)</h1>
+					<img class="stretch" src="images/morePower.jpg">
 				</section>
 				<section>
 					<h2>Powerful emulation tools in Chrome DevTools</h2>
@@ -187,11 +213,19 @@
 					</ul>
 				</section>
 				<section>
-					<h2>Emulators/Simulators</h2>
+					<h1>Emulators/Simulators</h1>
 					<ul>
 						<li>iOS <span class="fragment"> - Awesome</span></li>
 						<li>Android <span class="fragment"> - Only if no other option</span></li>
 					</ul>
+				</section>
+				<section>
+					<h2>iOS Simulator</h2>
+					<img class="stretch" src="images/rockApplause.gif">
+				</section>
+				<section>
+					<h2>Android Emulator</h2>
+					<img class="stretch" src="images/androidSad.jpg">
 				</section>
 				<section>
 					<h1>Physical Devices</h1>
@@ -203,18 +237,20 @@
 					<h1>Debugging</h1>
 				</section>
 				<section>
-					<h2>2 years ago, it was a nightmare</h2>
+					<h2>3 years ago</h2>
+					<img class="stretch" src="images/nightmare.jpg">
 				</section>
 				<section>
-					<h2>Now, much easier</h2>
+					<h2>Now</h2>
+					<img class="stretch" src="images/happy.jpg">
 				</section>
 				<section>
-					<h2>iOS</h2>
+					<h2 style="text-transform: none">iOS</h2>
 					<p>Simple to connect to desktop Safari to debug</p>
 				</section>
 				<section>
 					<h2>Android</h2>
-					<p>As of 4.4, desktop Chrome DevTools can debug a webview</p>
+					<p>As of 4.4 desktop Chrome DevTools can debug a webview</p>
 					<p class="fragment">For older versions of Android weinre is a good option</p>
 				</section>
 				
@@ -222,7 +258,16 @@
 					<h1>Performance Performance Performance</h1>
 				</section>
 				<section>
-
+					<p>Photo Sources</p>
+					<ul>
+						<li><a href="https://www.flickr.com/photos/saechang/4516316564/in/photolist-7T6iyY-kJTcjH-7T6ioh-kJU4tZ-kJTZbR-kJThik-kJVvvN-kJVw1q-kJTXHR-kJVvUy-kJThM6-kJU3ZT-kJVrxN-kJVpzj-kJVuPs-kJTXpe-kJVt9J-kJTXiT-kJU3Kp-kJVtXN-kJVowY-kJTgPz-kJVuoY-kJVuGy-kJTi24-kJVrCs-kJT9SP-kJTghn-kJVv4A-kJU6Ex-8LgbC4-8NTpXt-7WQFJn-7Sy7jm-8dABZE-7Xwnds-7XEJxd-8zucvb-7Xwpx9-7XtaJB-7XegWr-81CfGY-8L5wFF-7Xhv2N-7XegDT-7Xwn43-7WPBNb-8dXjH1-7WQFxa-7SuQCz">Michael Saechang</a></li>
+						<li><a href="https://www.flickr.com/photos/b_2/5573761769/in/photolist-9uwZbR-jb2JV-domNA1-wEaR6-9ZBGZm-Q1wZS-dXwYA3-byDxvf-8Eukb3-8gyrWP-4sA9Qj-5LHph-ejhNWc-2jrhkq-4NYkvZ-9oWubg-aQpb8v-8eWjA2-k1Kh1-5ENdnW-4f7WBj-cQmudU-dX21uZ-eF4eSp-4XH1Nd-ainTtC-2dY7Wh-bpEjuk-JscUP-cvZcem-nfump-8Zd8hD-mniLvg-7MkQMc-o7tiQ-6iNopC-kiVBoa-2NAso-ov3cwg-abxarX-abotsf-ah6HQ1-6PX9t2-nECm6B-FioHA-grh9JN-o8NN52-bP54wM-9A18oo-R5U1T">Bobbi Bowers</a></li>
+						<li><a href="https://www.flickr.com/photos/nostri-imago/2872461731">Cliff</a></li>
+						<li><a href="https://www.flickr.com/photos/nox_noctis_silentium/6133782598/in/photolist-djkxBJ-am2eSo-dPNfSD-7QF8zm-7QBGke-avNLu5-8U1L6P-8U4Gch-7QBJ6n-cyYg3b-ETAi-4zHxQ5-npiuxV-hTWZHu-9q1QAZ-avNLcu-avNMxf-hTXGVX-8U4z8u-8U1ybe-8U4fkG-5KxbMZ-avL8De-79LMye-avL892-8U1nuH-7SA4WF-5ELrsm-fmg1kY-5kYfzt-8U1KF8-9fP5nH-akjJ21-e99vx9-fQpnjW-9kZVZT-bpL8Lk-8U1K9H-9fP3Z8-9kZVA8-8U1rND-avNPoS-8U1bKv-8U4AWs-NFZxC-9fx6Sv-bCEAB6-avLbbZ-9fP5Jx-9fAg4U">Timitrius</a></li>
+						<li><a href="https://www.flickr.com/photos/eustaquio/5234031659/in/photolist-8YvMga-6wDVpY-6zHmCY-6Hug5V-6UxF42-hVEDhj-ahC8yc-ndWHMn-87ANEX-f8ge9z-f8geFg-nPDuPZ-f8geRx-e35pYP-cJZces-7wLViF-k6c8Xe-c9XWuN-HGh6j-jMEYD6-im1aPQ-k6cQAM-fMsjRu-m3CzNk-iJUnyH-nvWq9w-fLjmcB-j5dUex-m7A2ha-nkTLyk-6nqedF-fLAVJC-579vke-m3CzZx-fLAVvN-dWkWQ1-jAP3Yg-nPDdg9-dd5Zh4-i3vALF-macUZz-bjB8A6-f8vvEU-4nRZLd-k6cPkR-nPDcMJ-nPDdZU-9yKbAs-8BRgUk-3ba99Y">Eustaquio Santimano</a></li>
+						<li><a href="https://www.flickr.com/photos/mastermaq/11044375283/in/photolist-hPXiZv-oaotnT-hPWZ8J-hPWPdq-7mR74-7k6gFX-frHbjN-GQH5-hPWMZy-7Vpjcm-7CSfPF-dxZ5YU-aiocDJ-7CW4K3-7CW4EA-nuSNvU-AK1pk-4nacrG-dxBj42-6dktMc-DYgvx-GQH7-AK1p4-FtGtH-ccMrc-ebif3-ebicL-ebida-ebieb-bA9PFt-24TVw3-5e3Hyv-6gtGYM-o2LgVX-76vWx-5V15EE-4n68QK-7hE8yQ-24Pt7g-94jQFU-6KXwZ5-32Jfn-aNn39-5AuzE3-dxYZS3-5Zahzt-AK1pv-b6ERXr-637JQY-8M77oN">Mack Male</a></li>
+						<li><a href="https://www.flickr.com/photos/brentbat/4119713238">Brent Pearson</a></li>
+					</ul>
 				</section>
 			</div>
 
