@@ -51,7 +51,7 @@
       </section>
 
       <section>
-        <h2>Biography</h2>
+        <h1>Bio</h1>
         <p>
           Say something witty about myself
         </p>
@@ -107,9 +107,9 @@
       <section>
         <h2>Model</h2>
         <img class="stretch" src="images/modelTrain.jpg">
-        <aside class="notes">Share models between views/pages</aside>
         <aside class="notes">We didn't separate our models from our views, and as a result we couldn't delete our views or we would lose state</aside>
-        <aside class="notes"></aside>
+        <aside class="notes">Use the model to abstract your backend data structures from your frontend code</aside>
+        <aside class="notes">Share models between views/pages</aside>
       </section>
       <section>
         <h2>View</h2>
@@ -121,13 +121,15 @@
         <aside class="notes">Keeps separation of concerns</aside>
         <aside class="notes">Changing/iterating page designs was slow in JS</aside>
         <aside class="notes">Lead to CSS mixed into the code</aside>
-        <aside class="notes">Ignore this if you are using React</aside>
+        <aside class="notes">React users can happily ignore this advice</aside>
       </section>
       <section>
         <h2>Controller</h2>
         <img class="stretch" src="images/controller.jpg">
-        <aside class="notes">Guess how many controllers we had in our application...</aside>
+        <aside class="notes">Guess how many controllers we had in our application...1</aside>
+        <aside class="notes">Not only that, we also integrated our router into our controller</aside>
         <aside class="notes">Create a controller for each page</aside>
+        <aside class="notes">Even better, create a controller for each distinct UI component</aside>
       </section>
       <section>
         <h1>Framework Selection</h1>
@@ -139,6 +141,8 @@
       <section>
         <img class="stretch" src="images/doubleDown.jpg">
         <p>Bad Idea - Select a framework for non-technical reasons</p>
+        <aside class="notes">We used Dojo because the business used Dojo</aside>
+        <aside class="notes">Dojo didn't yet have a stable set of mobile widgets, no MVC support, not opinionated</aside>
       </section>
       <section>
         <h3>Framework considerations</h3>
@@ -146,28 +150,27 @@
           <li>Mobile support</li>
           <li>Performance</li>
           <li>Ease of use</li>
-          <li>Community</li>
           <li>Maturity</li>
+          <li>Community</li>
         </ul>
       </section>
       <section>
         <h2>For a first app use a full featured MV* framework</h2>
       </section>
       <section>
-        <p>Good frameworks include:</p>
-        <ul>
-          <li><a href="https://angularjs.org/">AngularJS</a>
+        <p>Good frameworks include</p>
+        <ul style="list-style-type: none">
+          <li><a href="https://angularjs.org/"><img style="vertical-align: middle" src="images/AngularJS-small.png"></a>
           </li>
-          <li><a href="http://emberjs.com/">Ember</a>
+          <li><a href="http://emberjs.com/"><img style="vertical-align: middle; height: 150px;" src="images/emberjs.png"></a>
           </li>
-          <li><a href="http://ionicframework.com/">Ionic</a> - Mobile specific, built on AngularJS</li>
+          <li><a href="http://ionicframework.com/"><img style="vertical-align: middle; width: 200px;" src="images/ionic-logo.png"></a></li>
           <li><a href="http://www.sencha.com/products/touch">Sencha Touch</a>
           </li>
           <li><a href="http://www.telerik.com/kendo-ui">Kendo UI</a>
           </li>
         </ul>
       </section>
-
       <section>
         <h3>With more experience you might also consider combining libraries to build a framework</h3>
         <ul>
@@ -187,32 +190,38 @@
       <section>
         <h2>Spend the time to make builds fast</h2>
         <p class="fragment">How fast?</p>
-        <h1 class="fragment">&lt; 30 seconds</h1>
+        <h1 class="fragment">&lt; 1 minute</h1>
       </section>
       <section>
         <h2>why?</h2>
         <ul>
+          <li>Set ambitious targets</li>
           <li>Attention Span</li>
           <li>On device testing</li>
           <li>Fail fast</li>
           <li>Avoid multi-tasking</li>
         </ul>
-        <aside class="notes">Long builds force multitasking, and every study done shows that humans are bad at multitasking when performing mentally challenging tasks like programming</aside>
       </section>
       <section>
         <img class="stretch" src="images/compiling.png">
+        <aside class="notes">Long builds force multitasking, and every study done shows that humans are bad at multitasking when performing mentally challenging tasks like programming</aside>
       </section>
       <section>
-        <h2>How?</h2>
+        <h1>How</h1>
         <ul>
           <li>Partial builds</li>
           <li>Parallel build steps</li>
+          <li>Faster build tools</li>
         </ul>
+      </section>
+      <section>
+        <h2>What if we can't get our builds that fast?</h2>
+        <p class="fragment">Find ways to test changes that don't require full builds</p>
       </section>
       <section>
         <h2>PhoneGap/Cordova prerequisites</h2>
         <ul>
-          <li><a href="http://nodejs.org/"><img style="height: 75px" src="images/nodejsLogo.svg"></a></li>
+          <li><a href="http://nodejs.org/"><img style="height: 75px; vertical-align: middle;" src="images/nodejsLogo.svg"></a></li>
           <li>Platform SDKs (i.e. Android SDK)</li>
           <li>For Android testing, a connected Android device or configured Android emulator</li>
           <li>npm, node, and Android tools in your path</li>
@@ -241,7 +250,12 @@ cordova emulate android
       <section>
         <h1>Example</h1>
       </section>
-      
+      <section>
+        <h2>Alternatively, use <a href="https://build.phonegap.com/">Adobe PhoneGap Build</a></h2>
+        <p>Cloud based builds</p>
+        <p>Support for pushing updates to devices during testing</p>
+        <p>Signing and releasing builds is still a challenge</p>
+      </section>
       
       <section>
         <h1>Testing</h1>
@@ -253,9 +267,11 @@ cordova emulate android
         <ul class="fragment">
           <li>Desktop Browser</li>
           <li>Mobile Browser</li>
-          <li>Emulator/Simulator</li>
+          <li>Official Emulator/Simulator</li>
+          <li>3rd Party Emulator/Simulator</li>
           <li>Physical Devices</li>
-          <li>Cloud Services</li>
+          <li>PhoneGap Developer App</li>
+          <li>Cloud Services</li>        
         </ul>
       </section>
       <section>
@@ -264,26 +280,24 @@ cordova emulate android
       </section>
       <section>
         <img class="stretch" src="images/morePower.jpg">
+        <aside class="notes">Faster iterations</aside>
       </section>
       <section>
-        <h2>Powerful emulation tools in Chrome DevTools</h2>
+        <p>Powerful emulation DevTools in Chrome</p>
+        <img src="images/chrome-emulation.png">
+        <aside class="notes">They just improved this function in Chrome 38</aside>
       </section>
       <section>
         <h2>Desktop browser drawbacks</h2>
         <ul>
           <li>Useless for performance testing</li>
-          <li>Misses web view/browser specific issues</li>
-          <li>Hard to test device features</li>
+          <li>Misses WebView/browser specific issues</li>
+          <li>Hard/impossible to test device features</li>
+          <aside class="notes">Probably 50% of our defects were vendor, browser, or device specific</aside>
         </ul>
       </section>
       <section>
-        <h1>Emulators/Simulators</h1>
-        <ul>
-          <li>iOS <span class="fragment"> - Awesome</span>
-          </li>
-          <li>Android <span class="fragment"> - Only if no other option</span>
-          </li>
-        </ul>
+        <h1>Emulators & Simulators</h1>
       </section>
       <section>
         <h2>iOS Simulator</h2>
@@ -294,10 +308,34 @@ cordova emulate android
         <img class="stretch" src="images/androidSad.jpg">
       </section>
       <section>
+        <h2>Android Emulator Alternatives</h2>
+        <ul style="list-style-type: none">
+          <li><img style="width: 250px" src="images/logo_genymotion.png"></li>
+          <li><a href="https://www.manymo.com/">Manymo</a></li>
+        </ul>
+        <aside class="notes">I haven't used either of these, so I can't vouch for their quality</aside>
+      </section>
+      <section>
         <h1>Physical Devices</h1>
       </section>
       <section>
         <img class="stretch" src="images/phonesEverywhere.jpg">
+      </section>
+      <section>
+        <h2><a href="http://app.phonegap.com/">Phonegap Developer App</a></h2>
+        <img class="stretch" src="images/phonegap-Dev-App.png">
+      </section>
+      <section>
+        <h2>Cloud Services</h2>
+        <ul>
+          <li><a href="http://developer.samsung.com/remotetestlab/rtlDeviceList.action">Samsung Device Lab</a></li>
+          <li><a href="http://www.keynote.com/solutions/testing/mobile-testing">Keynote/DeviceAnywhere</a></li>
+          <li><a href="https://saucelabs.com/"></a>Sauce Labs</li>
+          <li><a href="http://www.browserstack.com/">BrowserStack</a></li>
+          <li><a href="https://testobject.com/">Test Object</a></li>
+          <li>Many more, and more available all the time...</li>
+        </ul>
+        <aside class="notes">I don't have personal experience with any of these</aside>
       </section>
       <section>
         <h1>Debugging</h1>
