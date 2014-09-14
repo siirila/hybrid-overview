@@ -254,7 +254,6 @@ cordova emulate android
         <h2>Alternatively, use <a href="https://build.phonegap.com/">Adobe PhoneGap Build</a></h2>
         <p>Cloud based builds</p>
         <p>Support for pushing updates to devices during testing</p>
-        <p>Signing and releasing builds is still a challenge</p>
       </section>
       
       <section>
@@ -268,7 +267,7 @@ cordova emulate android
           <li>Desktop Browser</li>
           <li>Mobile Browser</li>
           <li>Official Emulator/Simulator</li>
-          <li>3rd Party Emulator/Simulator</li>
+          <li>3rd Party Emulators/Simulators</li>
           <li>Physical Devices</li>
           <li>PhoneGap Developer App</li>
           <li>Cloud Services</li>        
@@ -284,14 +283,18 @@ cordova emulate android
       </section>
       <section>
         <p>Powerful emulation DevTools in Chrome</p>
-        <img src="images/chrome-emulation.png">
+        <img class="stretch" src="images/chrome-emulation.png">
         <aside class="notes">They just improved this function in Chrome 38</aside>
       </section>
       <section>
         <h2>Desktop browser drawbacks</h2>
         <ul>
           <li>Useless for performance testing</li>
-          <li>Misses WebView/browser specific issues</li>
+          <li>Misses WebView/browser/vendor/device specific issues
+            <ul>
+              <li>These accounted for >50% of our defects</li>
+            </ul>
+          </li>
           <li>Hard/impossible to test device features</li>
           <aside class="notes">Probably 50% of our defects were vendor, browser, or device specific</aside>
         </ul>
@@ -350,16 +353,32 @@ cordova emulate android
       </section>
       <section>
         <h2 style="text-transform: none">iOS</h2>
-        <p>Simple to connect to desktop Safari to debug</p>
+        <p>Since iOS 6, it's easy to connect to desktop Safari to debug</p>
       </section>
       <section>
         <h2>Android</h2>
         <p>As of 4.4 desktop Chrome DevTools can debug a webview</p>
-        <p class="fragment">For older versions of Android weinre is a good option</p>
+      </section>
+      <section>
+        <h2>Alternative debugging tools</h2>
+      </section>
+      <section>
+        <h1><a href="http://people.apache.org/~pmuellr/weinre-docs/latest/">Weinre</a></h1>
+        <ul>
+          <li>useful for debugging older versions of Android and iOS</li>
+          <li>Similar to the built in debugging tools, but with more limited function</li>
+          <li>A little difficult to setup and use</li>
+        </ul>
+      </section>
+      <section>
+        <h1><a href="https://www.genuitec.com/products/gapdebug/">GapDebug</a></h1>
+        <p>Looks promising</p>
       </section>
 
       <section>
-        <h1>Performance Performance Performance</h1>
+        <h1>Performance</h1>
+        <h1>Performance</h1>
+        <h1>Performance</h1>
       </section>
       <section>
         <p>Photo Sources</p>
