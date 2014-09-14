@@ -80,7 +80,12 @@
 * [Why mobile web apps are slower than native and always will be] (http://sealedabstract.com/rants/why-mobile-web-apps-are-slow/)  
 
 * [Top 10 performance tips for PhoneGap apps] (http://coenraets.org/blog/2013/10/top-10-performance-techniques-for-phonegap-and-hybrid-apps-slides-available/)  
-* [Performance suggestions for PhoneGap apps] (http://www.tricedesigns.com/2013/03/11/performance-ux-considerations-for-successful-phonegap-apps/)  
+* [Performance suggestions for PhoneGap apps] (http://www.tricedesigns.com/2013/03/11/performance-ux-considerations-for-successful-phonegap-apps/) 
+* [SVG performance on mobile devices] (http://stackoverflow.com/questions/11571026/state-of-svg-performance-on-ios-and-other-tablets)  
+[iOS 7 performance analysis] (http://www.sencha.com/blog/the-html5-scorecard-the-good-the-bad-and-the-ugly-in-ios7/)  
+* [Block element scrolling on iOS 5] (http://cantina.co/thought_leadership/ios-5-native-scrolling-grins-and-gothcas/) 
+* [Fix for iOS 7 scrollable element issue] (http://stackoverflow.com/questions/18736297/webkit-overflow-scrolling-touch-broken-in-ios7)  
+
 * [Managing JS memory usage and garbage collection with memory pools] (http://www.html5rocks.com/en/tutorials/speed/static-mem-pools/)  
 
 ## Misc

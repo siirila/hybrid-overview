@@ -46,7 +46,9 @@
         <h1>Hybrid Gone Wrong</h1>
         <h3>Lessons learned developing a hybrid app</h3>
         <p>
-          <small>Created by <a href="">Jared Siirila</a> / <a href="http://twitter.com/jtsiirila">@jtsiirila</a></small>
+          <small>Created by <a href="">Jared Siirila</a></small><br>
+          <small>Twitter <a href="http://twitter.com/jtsiirila">@jtsiirila</a></small><br>
+          <small><a href="https://github.com/siirila/hybrid-overview">https://github.com/siirila/hybrid-overview</a></small>
         </p>
       </section>
 
@@ -57,6 +59,11 @@
         </p>
       </section>
 
+      <section>
+        <blockquote cite="http://blogs.telerik.com/appbuilder/posts/12-06-14/what-is-a-hybrid-mobile-app-">Hybrid apps, like native apps, run on the device, and are written with web technologies (HTML5, CSS and JavaScript). Hybrid apps run inside a native container, and leverage the device’s browser engine (but not the browser) to render the HTML and process the JavaScript locally. A web-to-native abstraction layer enables access to device capabilities that are not accessible in Mobile Web applications, such as the accelerometer, camera and local storage.</blockquote>
+        <small><a href="http://blogs.telerik.com/appbuilder/posts/12-06-14/what-is-a-hybrid-mobile-app-">Telerik post source</a></small>
+      </section>
+      
       <section>
         <section>
           <h2>Our first app</h2>
@@ -384,6 +391,63 @@ cordova emulate android
         <h2>Are hybrid apps slow?</h2>
         <h1 class="fragment"><a href="http://sealedabstract.com/rants/why-mobile-web-apps-are-slow/">Yes</a></h1>
         <h2 class="fragment">Compared to native apps</h2>
+      </section>
+      <section>
+        <h2>Does that mean I shouldn't develop a hybrid app?</h2>
+        <h1 class="fragment">No</h1>
+        <h2 class="fragment">It depends on the your use case</h2>
+      </section>
+      <section>
+        <h2>Making Hybrid Faster</h2>
+      </section>
+      <section>
+        <h2>Scrolling</h2>
+        <p>Persistent pain point of hybrid apps</p>
+        <p>Use native scrollable block elements, supported on iOS 5+ and Android 3+</p>
+        <pre><code>
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+        </code></pre>
+        <p><a href="http://stackoverflow.com/questions/18736297/webkit-overflow-scrolling-touch-broken-in-ios7">Fix for iOS 7 issues with scrollable elements</a></p>
+        <p>Most of the mobile frameworks handle this already</p>
+      </section>
+      <section>
+        <p>How does a touch device recognize a double click/tap?</p>
+        <p class="fragment">It <a href="http://ionicframework.com/blog/hybrid-apps-and-the-curse-of-the-300ms-delay/">waits 300ms</a> after a tap to see if another one happens</p>
+        <p class="fragment">This can be avoided with tools such as <a href="https://github.com/ftlabs/fastclick">Fastclick</a></p>
+        <p class="fragment">Most of the mobile frameworks handle this already</p>
+      </section>
+      <section>
+        <h2>Network access can be slow</h2>
+        <ul>
+          <li>Create the UI in JavaScript, not on the server</li>
+          <li>Cache data locally where feasible</li>
+          <li>Minimize network requests
+            <ul>
+              <li>Sprite sheets</li>
+              <li>Compression</li>
+              <li>Combine and minify files</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Images</h2>
+        <ul>
+          <li>Avoid SVGs</li>
+          <li>If shadows and gradients are needed, use images not CSS</li>
+          <li>Use the right image size, avoid scaling</li>
+          <li>Store images in app, don't download from server</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Minimize Browser Reflows</h2>
+        <ul>
+          <li>Minimize DOM nodes and DOM nesting</li>
+          <li>Use CSS transforms</li>
+          <li>Use fixed widths and heights</li>
+          <li>Avoid loops that directly modify the DOM within the loop</li>
+        </ul>
       </section>
       <section>
         <p>Photo Credits</p>
