@@ -14,6 +14,7 @@
 * [Comparison of 4 popular mobile UI frameworks] (http://www.developereconomics.com/look-4-mobile-ui-frameworks/)  
 * [Comparison of 5 popular hybrid mobile app frameworks] (http://moduscreate.com/5-best-mobile-web-app-frameworks-sencha-touch/)  
 * [Creating mobile apps using Backbone.js] (http://www.slideshare.net/ronreiter/writing-html5-mobile-web-apps-using-backbonejs)  
+[Raymond Camden's impression of Ionic] (http://www.raymondcamden.com/2014/7/28/My-perspective-of-working-with-the-Ionic-Framework)  
 
 ## Building
 
@@ -75,6 +76,8 @@
 * [GapDebug] (https://www.genuitec.com/products/gapdebug/)  
 
 ## Performance
+
+* [Why mobile web apps are slower than native and always will be] (http://sealedabstract.com/rants/why-mobile-web-apps-are-slow/)  
 
 * [Top 10 performance tips for PhoneGap apps] (http://coenraets.org/blog/2013/10/top-10-performance-techniques-for-phonegap-and-hybrid-apps-slides-available/)  
 * [Performance suggestions for PhoneGap apps] (http://www.tricedesigns.com/2013/03/11/performance-ux-considerations-for-successful-phonegap-apps/)  
